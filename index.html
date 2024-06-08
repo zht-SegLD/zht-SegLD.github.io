@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">SegLD: Achieving universal, zero-shot and open-vocabulary segmentation through multimodal fusion via latent diffusion processes</h1>
+            <h1 class="title is-1 publication-title">SegLD: Achieving Universal, Zero-Shot and Open-Vocabulary Segmentation through Multimodal Fusion via Latent Diffusion Processes</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -104,7 +104,7 @@
                 <a href="https://huggingface.curated.co/" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
-                  <i class="fas fa-file-huggingface"></i>
+                  <i class="fab fa-file-huggingface"></i>
                 </span>
                 <span>Demo</span>
               </a>
@@ -117,23 +117,24 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Pipeline of SegLD Training Process.
+        </h2>
+      </div>
     </div>
   </div>
+</div>
+</div>
 </section>
-<!-- End teaser video -->
+<!-- End image carousel -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -143,8 +144,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            Open-vocabulary learning can identify categories marked during training (seen categories) and generalize to categories not annotated in the training set (unseen categories). It could theoretically extend segmentation systems to more universal applications. However, current open-vocabulary segmentation frameworks are primarily suited for specific tasks or require retraining according to the task, and they significantly underperform in inferring  seen categories compared to fully supervised frameworks. Therefore, we introduce a universal open-vocabulary segmentation framework based on the latent diffusion process (\textbf{SegLD}), which requires only a single training session on a panoptic dataset to achieve inference across all open-vocabulary segmentation tasks, and reaches SOTA segmentation performance for both seen and unseen categories in every task. Specifically, SegLD comprises two stages: in the first stage, we deploy two parallel latent diffusion processes to deeply fuse the text (image caption or category labels) and image information, further aggregating the multi-scale features output from both latent diffusion processes on a scale basis. In the second stage, we introduce text queries, text list queries, and task queries, facilitating the learning of inter-category and inter-task differences through the computation of contrastive losses between them. Text queries are then further fed into a Transformer Decoder to obtain category-agnostic segmentation masks. Then we establish classification loss functions for the type of text input during training, whether image captions or category labels, to help assign a category label from the open vocabulary to each predicted binary mask. Experimental results show that, with just a single training session, SegLD significantly outperforms other contemporary SOTA fully supervised segmentation frameworks and open-vocabulary segmentation frameworks across all evaluation metrics for both known and unknown categories on the ADE20K, Cityscapes, and COCO datasets. This highlights SegLD's capability as a universal segmentation framework, with the potential to replace other segmentation frameworks and adapt to various segmentation domains.
         </div>
       </div>
     </div>
@@ -160,31 +160,24 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/2_1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Pipeline of SegLD Training Process.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/2_2.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Pipeline of Mask-Decoder Training Process.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
+        <img src="static/images/3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="Pipeline of SegLD Inference Process">
          Third image description.
        </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
 </div>
